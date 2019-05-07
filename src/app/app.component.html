@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<div id="mySidenav" class="sidenav">
+  <p class="home">
+    <a [routerLink] = "['/home']">Home</a>
+  </p>
+  <p class="update">
+    <a [routerLink] = "['/add']">Update Car Status</a>
+  </p>
+</div>
+<div class="main" >
+ <router-outlet></router-outlet>  
+</div>

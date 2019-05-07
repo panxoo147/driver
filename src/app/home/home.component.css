@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+  
+h1{
+    font-size: 12em;
+    background-color: aliceblue;
+    padding: 200px;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 60px;
+}
+body{
+    text-align: center;
+    font-family: 'Montserrat';
+    text-align: center;
+    background-color: rgb(180, 241, 226);
+}
+p{
+    font-size: 3em;
+}
+button{
+    width: 10em;
+    height: 2em;;
+}

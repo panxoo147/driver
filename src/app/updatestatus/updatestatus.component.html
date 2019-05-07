@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div>
+  <br>
+    <p style="font-size: 2em">update car status page</p> 
+
+    <ul>
+      <label >CarID:</label>
+      <input [disabled]="Start" type="text" name="courseId" [(ngModel)]="cId">
+      <label >    ป้ายปัจจุบัน:</label>
+      <input  disabled=true type="text" name="courseCode" [(ngModel)]="currentLoc">
+    
+      <label >  ป้ายหน้า:</label>
+      <input disabled=true type="text" name="courseName" [(ngModel)]="nextLoc">
+      <label >   ปริมาณคน:</label>
+      <input disabled=true type="text" name="statusName" [(ngModel)]="status">
+      <button (click)="start()">{{text}}</button><br>
+    </ul>
+  <br>
+<div style="background-color: chartreuse">
+  <h1>For Route1</h1>
+      <div>
+      <button [disabled]="btndisable1" class="btn btn-primary" (click)="location1()">หอพัก</button>
+      <button [disabled]="btndisable1" class="btn btn-primary" (click)="location2()">ตึกคณะสังคมศาสตร์</button>
+      <button [disabled]="btndisable1" class="btn btn-primary" (click)="location3()">ห้องสมุด</button>
+    </div>
+    <div>
+      <button [disabled]="btndisable1" class="btn btn-primary" (click)="location4()">ตึกคณะวิทย์</button>
+      <button [disabled]="btndisable1" class="btn btn-primary" (click)="location5()">ยิมสเตเดียม</button>
+      <button [disabled]="btndisable1" class="btn btn-primary" (click)="location6()">ศูนย์อาหาร</button>
+    </div>
+ </div>
+<div style="background-color: rgb(236, 161, 236)">
+    <h1>For Route2</h1>
+      <div>
+      <button [disabled]="btndisable2" class="btn btn-primary" (click)="location7()">หอพัก</button>
+      <button [disabled]="btndisable2" class="btn btn-primary" (click)="location8()">โรงอาหาร</button>
+      <button [disabled]="btndisable2" class="btn btn-primary" (click)="location9()">ตึกคณะแพทย์</button>
+    </div>
+    <div >
+      <button [disabled]="btndisable2" class="btn btn-primary" (click)="location10()">ศูนย์หนังสือ</button>
+      <button [disabled]="btndisable2" class="btn btn-primary" (click)="location11()">ตึกคณะสถาปัตย์</button>
+    </div>
+</div>
+<div style="background-color: rgb(127, 246, 255)">
+    <h1>For Route3</h1>
+  <div>
+    <button [disabled]="btndisable3" class="btn btn-primary" (click)="location12()">ท่ารถ</button>
+    <button [disabled]="btndisable3" class="btn btn-primary" (click)="location13()">โรงอาหาร</button>
+    <button [disabled]="btndisable3" class="btn btn-primary" (click)="location14()">สำนักทะเบียน</button>
+  
+  </div>
+  <div >
+    <button [disabled]="btndisable3" class="btn btn-primary" (click)="location15()">ตึกคณะเศรษฐศาสตร์</button>
+    <button [disabled]="btndisable3" class="btn btn-primary" (click)="location16()">หอพัก</button>
+  </div>
+</div>
+    <br>
+    <label style="font-size: 2em;">
+      ปริมาณคน
+    </label>
+    <p>
+      <button class="save btn-primary" (click)="empty()">ว่าง</button>
+      <button class="save btn-primary" (click)="more()">ว่างอยู่</button>
+      <button class="save btn-primary" (click)="full()">เต็ม</button>
+    </p>
+
+</div>
+</body>
+</html>
