@@ -146,8 +146,6 @@ export class UpdateStatusComponent implements OnInit {
         this.btndisable2=true;
         this.btndisable1=true;
       }
-      
-
       this.Start = true;
       this.text="Stop Drive";
       this.Onlinestate=1;
@@ -190,9 +188,12 @@ export class UpdateStatusComponent implements OnInit {
   }
   driverStatus(){
     console.log("going to Online/Offline");
+    
     this.courseService.changeStatus(this.cId,this.Onlinestate).subscribe(
+      
       result => {
         if (result){
+          console.log(result);
           this.router.navigate(["/add"]);
         }else{
           alert ("Error submitting the data");

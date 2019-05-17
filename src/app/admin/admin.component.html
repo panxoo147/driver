@@ -1,0 +1,28 @@
+
+<h1>
+  <p>
+    ADMIN PAGE
+  </p>
+</h1>
+
+
+<label style=" margin-left: 15px;">Input memberID that you want to delete</label>
+
+<p style=" margin-left: 20px;">
+  <input type="text" name="memID" placeholder="input member id" [(ngModel)]="ID">
+  
+</p>
+
+<table> 
+
+    <tr *ngFor="let c of tableList"> 
+      <td>{{ c.getMemid() }}</td>
+      <td>{{ c.getName() }}</td>
+      <td>{{c.getRoute()}}</td>
+    </tr>
+</table>
+<br>
+<p style=" margin-left: 10px;">
+  <button (click)="delMember()">Delete member ({{ID}})</button><br><br>
+  <button (click)="Logout()">Log Out</button><br><br>
+</p>

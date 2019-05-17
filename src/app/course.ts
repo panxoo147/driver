@@ -1,24 +1,32 @@
 export class Course{
-  private id:number;
-  private code:string;
+  private memID:number;
+    
+  private Username:string;
+
   private name:string;
-  private currentLoc:string;
-  private nextLoc:string;
-  private status:string;
 
-
-  constructor(id:number, code:string,name:string){
-    this.id = id;
-    this.code = code;
+  private route:number;
+  
+  
+  constructor(memID:number, Username:string,name:string,route:number){
+    this.memID = memID;
+    this.Username = Username;
     this.name = name;
+    this.route=route;
   }
-  public getId():number{
-    return this.id;
+
+  public getMemid():number{
+       return this.memID
   }
-  public getCode():string{
-    return this.code;
-  }
+  public getUname():string{
+      return this.Username;
+ }
+
   public getName():string{
     return this.name;
   }
+
+  public getRoute():number{
+      return this.route;
+ }
 }

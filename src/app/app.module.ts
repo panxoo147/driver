@@ -8,12 +8,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import {CourseService} from './course.service';
-import {UpdateStatusComponent } from './updatestatus/updatestatus.component'
+import {UpdateStatusComponent } from './updatestatus/updatestatus.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component'
 
 
 const routes: Routes = [ 
   { path: 'home', component: HomeComponent }, 
-  
+  {path : 'adminlogin', component: AdminloginComponent},
+  {path : 'admin', component: AdminComponent},
   { path: 'add', component: UpdateStatusComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' }
  ]; 
@@ -24,7 +27,9 @@ const routes: Routes = [
     AppComponent,
 
     HomeComponent,
-    UpdateStatusComponent
+    UpdateStatusComponent,
+    AdminComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,

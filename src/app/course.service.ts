@@ -41,10 +41,10 @@ export class CourseService {
    } else {
      let arr:Course[] =[];
      for (let dbCourse of data.data){
-       let c:Course = new Course(dbCourse.id, dbCourse.code ,dbCourse.name);
+       let c:Course = new Course(dbCourse.memID, dbCourse.uname ,dbCourse.name,dbCourse.route);
        
        arr.push(c);
-     } 
+     }
      return arr;
    }
  }
@@ -92,5 +92,26 @@ export class CourseService {
         return Observable.throw(error);     
     })  
  }
-    
+ public deleteMember (id:number):Observable<boolean>{
+  let url = this.baseurl+"course/deleteMem.php";
+  let body = "&cId="+id;
+  let header = { headers: new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }) };
+  let callUrl: string = url + "?" + body;
+  console.log("add couse calling: " + callUrl);
+  return this.http.post(url, body, header)
+  .map((res: Response) => {
+     let data = res.json();
+     if (data.message == "Success"){
+       console.log("del success");
+       return true;
+     }else{
+        console.log("del fail");
+        return false;
+     }
+  })
+  .catch((error: any) => {
+      console.log("throw error" + JSON.stringify(error));
+      return Observable.throw(error);     
+  })  
+}
 }

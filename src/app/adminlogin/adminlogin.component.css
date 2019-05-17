@@ -1,0 +1,24 @@
+body{
+    padding: 1em 1em;
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+   margin-top: 15%;
+  width: 540px;
+  border-radius: 15px;
+  margin-left: 28%;
+  
+  background-image: linear-gradient(to right, rgb(217, 250, 192),rgb(176, 240, 210));
+}
+
+form{
+    padding: 1em 1em;
+    
+}
+button{
+    border: none;
+    border-radius: 10px;
+}
+input {
+    background-color: rgb(240, 231, 231);
+    border: none;
+}
